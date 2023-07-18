@@ -4,7 +4,7 @@ const push = (arr, ...appendValues) => [...arr, ...appendValues];
 const pop = (arr, cnt = 1) => {
     let result = [];
     for (let i = 0; i < cnt; i += 1) {
-        result = [...result, arr[arr.length - (i + 1)]];
+        result = [arr[arr.length - (i + 1)], ...result];
     }
     return result?.length === 1 ? result[0] : result;
 }
